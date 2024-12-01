@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-property-sort-order-smacss"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-selector-bem-pattern"
+  ],
+  "ignoreFiles": [
+    "node_modules/**/*",
+    "dist/**/*"
+  ],
+  "rules": {
+    "import-notation": null,
+    "max-nesting-depth": 3,
+    "scss/dollar-variable-empty-line-before": null
+  }
+}
