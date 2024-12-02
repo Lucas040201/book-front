@@ -2,14 +2,13 @@ import { Component } from '@angular/core';
 import {BookFormComponent} from '../../../shared/components/book-form/book-form.component';
 import {BookService} from '../../../shared/services/book/book.service';
 import BookForm from '../../../shared/interfaces/book-form.interface';
-import {Router, RouterLink} from '@angular/router';
+import {Router} from '@angular/router';
 import ShowBookDto from '../../../shared/services/book/dto/show-book.dto';
 
 @Component({
   selector: 'app-create',
   imports: [
     BookFormComponent,
-    RouterLink,
   ],
   templateUrl: './create.component.html',
   standalone: true,
