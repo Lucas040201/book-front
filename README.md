@@ -1,59 +1,51 @@
-# BookFront
+<h3  align="center">Book Test Frontend - CSC Group</h3>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
 
-## Development server
+## 📝 Sumário
 
-To start a local development server, run:
+- [Sobre](#sobre)
 
-```bash
-ng serve
-```
+- [Ambiente](#ambiente)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- [Começando](#comecando)
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🧐 Sobre <a name = "sobre"></a>
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
-ng generate --help
-```
+Este projeto é um sistema de gerenciamento de livros que permite realizar operações CRUD (Criar, Ler, Atualizar e Excluir) em registros de livros. Além disso, o sistema consome uma API externa para buscar informações adicionais sobre o autor, como nome e biografia, e exibir esses dados junto com os detalhes do livro.
 
-## Building
+## 🏝️ Ambiente <a name="ambiente"></a>
 
-To build the project run:
+Dependências do projeto:
 
-```bash
-ng build
-```
+- Node v20.18.0
+- npm v10.8.2
+- Angular v19
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
-## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 🏁 Começando <a name = "comecando"></a>
 
-```bash
-ng test
-```
+Clone o projeto com
+````
+git clone git@github.com:Lucas040201/book-front.git
+````
+**OU**
+````
+https://github.com/Lucas040201/book-front.git
+````
+Para configurar o projeto, siga os passos abaixo:
 
-## Running end-to-end tests
+1. Acesse a pasta raiz do projeto.
+2. Instale as dependências executando o comando:
+   ```bash
+   npm install
+   ```
+3. Inicie a aplicação com o comando:
+   ```bash
+   npm start
+   ```
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 👌 Fim
