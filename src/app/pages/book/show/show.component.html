@@ -1,0 +1,39 @@
+<div class="book-wrapper wrapper">
+  @if(loading) {
+    <div class="d-flex justify-content-center">
+      <app-loader></app-loader>
+    </div>
+  } @else {
+    <div class="book-content row px-3 px-md-0">
+      <div class="book-edit d-flex justify-content-end pb-3">
+        <a [routerLink]="['/', 'book', 'edit', currentBook?.id]" class="btn btn-warning"><mat-icon>edit</mat-icon></a>
+        <button class="btn btn-danger ms-3" (click)="delete()"><mat-icon>delete</mat-icon></button>
+      </div>
+      <div class="book-left-columns col-12 col-md-6">
+        <h2 class="m3-5">Book Details</h2>
+        <div class="book-details">
+          <h3 class="book-title">{{currentBook?.title}}</h3>
+          <p class="book-desc">{{currentBook?.description}}</p>
+          <div class="book-info row">
+            <p class="book-price d-flex align-items-center col-6 col-md-3" [matTooltip]="'Price'">
+              <span class="text-warning pe-2"><mat-icon>paid</mat-icon></span>
+              {{currentBook?.price}}
+            </p>
+            <p class="book-quantity d-flex align-items-center col-6 col-md-2" [matTooltip]="'Quantity'">
+              <span class="text-danger pe-2"><mat-icon>production_quantity_limits</mat-icon></span>
+              {{currentBook?.quantity}}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="book-right-column col-12 col-md-6">
+        <h2 class="mb-3">Author Details</h2>
+        <div class="book-author">
+          <h3>{{currentBook?.author?.name}}</h3>
+          <p [innerHTML]="currentBook?.author?.biography"></p>
+        </div>
+      </div>
+    </div>
+
+  }
+</div>

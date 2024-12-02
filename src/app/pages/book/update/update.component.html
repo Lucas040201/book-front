@@ -1,0 +1,13 @@
+<div class="create wrapper px-3 px-lg-0">
+  @if(loading) {
+    <div class="d-flex justify-content-center">
+      <app-loader></app-loader>
+    </div>
+  } @else {
+    <div class="d-flex justify-content-end">
+      <a [routerLink]="['/', 'book', bookData.id]" class="btn btn-success"><mat-icon>visibility</mat-icon></a>
+    </div>
+    <h2 class="mb-3">Update Book</h2>
+    <app-book-form (formValue)="submit($event)" [bookData]="bookData"></app-book-form>
+  }
+</div>

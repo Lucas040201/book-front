@@ -1,0 +1,36 @@
+<div class="book-wrapper wrapper px-3 px-lg-0">
+  @if(loading) {
+    <div class="d-flex justify-content-center">
+      <app-loader></app-loader>
+    </div>
+  } @else {
+    <div class="pb-3">
+      <a [routerLink]="['book', 'create']" class="btn btn-success">Create a Book</a>
+    </div>
+    <div class="book-search pb-3">
+      <app-default-form-filter (filterFormEvent)="submitForm($event)" ></app-default-form-filter>
+    </div>
+    <div class="book-items pb-2">
+      @for (book of booksPagination.items; track book.id) {
+        <div class="book d-flex justify-content-between py-2 px-2 align-items-center">
+          <a [routerLink]="['book', book.id]">
+            {{book.title}}
+          </a>
+          <div>
+            <a class="btn btn-warning" [routerLink]="['book', 'edit', book.id]"><mat-icon>edit</mat-icon></a>
+            <button class="btn btn-danger ms-2" (click)="delete(book.id)"><mat-icon>delete</mat-icon></button>
+          </div>
+        </div>
+      } @empty {
+        <h4 class="text-sm-center py-5">There are no books registered</h4>
+      }
+    </div>
+    <mat-paginator
+      (page)="handlePage($event)"
+      [length]="booksPagination.count"
+      [pageSizeOptions]="[5, 10, 25]"
+      [pageSize]="booksPagination.limit"
+    />
+  }
+</div>
+
