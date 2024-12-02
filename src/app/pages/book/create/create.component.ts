@@ -4,14 +4,12 @@ import {BookService} from '../../../shared/services/book/book.service';
 import BookForm from '../../../shared/interfaces/book-form.interface';
 import {Router, RouterLink} from '@angular/router';
 import ShowBookDto from '../../../shared/services/book/dto/show-book.dto';
-import {MatIcon} from '@angular/material/icon';
 
 @Component({
   selector: 'app-create',
   imports: [
     BookFormComponent,
     RouterLink,
-    MatIcon
   ],
   templateUrl: './create.component.html',
   standalone: true,
